@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FruitsGridView.swift
 //  FruityApp
 //
 //  Created by Cem Aksoy on 18.01.2026.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FruitsGridView: View {
   @State private var fruits = Fruits()
   
   var body: some View {
@@ -48,5 +48,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    FruitsGridView()
 }

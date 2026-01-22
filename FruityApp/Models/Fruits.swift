@@ -9,22 +9,6 @@ import Foundation
 
 @Observable
 class Fruits {
-  struct Nutrition: Codable, Hashable {
-    var calories: Int
-    var fat: Double
-    var sugar: Double
-    var carbohydrates: Double
-    var protein: Double
-  }
-  
-  struct Fruit: Codable, Hashable {
-    var name: String
-    var id: Int
-    var family: String
-    var order: String
-    var genus: String
-    var nutritions: Nutrition
-  }
   
   let urlString = "https://www.fruityvice.com/api/fruit/all"
   var fruits: [Fruit] = []
