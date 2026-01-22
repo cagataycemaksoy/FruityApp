@@ -12,8 +12,29 @@ struct FruitDetailView: View {
   
     var body: some View {
       VStack(alignment: .leading) {
+        Text(fruit.name)
+          .font(.largeTitle.bold())
+
+        Text("Family: \(fruit.family)")
+          .font(.subheadline.italic())
         
+        Rectangle()
+          .fill(.gray.opacity(0.5))
+          .frame(height: 1)
+          .padding(.bottom)
+        
+        Group {
+          Text("Calories: \(fruit.nutritions.calories) kcal")
+          Text("Fat: \(fruit.nutritions.fat.formatted()) g")
+          Text("Carbonhydrates: \(fruit.nutritions.carbohydrates.formatted()) g")
+          Text("Protein: \(fruit.nutritions.protein.formatted()) g")
+        }
+        .font(.title3)
+        
+        Spacer()
       }
+      .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+      .padding(.horizontal)
     }
 }
 
