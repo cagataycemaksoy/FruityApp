@@ -16,7 +16,7 @@ struct FruitsGridView: View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 105), spacing: 12)], spacing: 10) {
           ForEach(fruits.fruits, id: \.self) { fruit in
             NavigationLink {
-              Text(fruit.name)
+              FruitDetailView(fruit: fruit)
             } label: {
               ZStack{
                 RoundedRectangle(cornerRadius: 15)
